@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.suitmedia.R
 import com.example.suitmedia.data.ViewModelFactory
@@ -32,8 +33,13 @@ class ThirdScreenActivity : AppCompatActivity() {
 
         adapter = UserAdapter()
         binding.apply {
+            val layoutManager = LinearLayoutManager(applicationContext)
             rvUser.adapter = adapter
-            rvUser.layoutManager = LinearLayoutManager(applicationContext)
+            rvUser.layoutManager = layoutManager
+
+            val itemDecoration = DividerItemDecoration(applicationContext, layoutManager.orientation)
+            rvUser.addItemDecoration(itemDecoration)
+
             refresh.setOnRefreshListener {
                 getUser()
                 refresh.isRefreshing = false
@@ -58,7 +64,6 @@ class ThirdScreenActivity : AppCompatActivity() {
             showLoading(false)
             if (result != null) {
                 adapter.submitData(lifecycle, result)
-                binding.tvEmpty.visibility = View.GONE
             } else {
                 binding.apply {
                     refresh.visibility = View.GONE

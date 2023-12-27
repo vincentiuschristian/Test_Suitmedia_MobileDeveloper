@@ -33,12 +33,13 @@ class SecondScreenActivity : AppCompatActivity() {
             }
         }
 
-        val name = intent.getStringExtra(EXTRA_NAME)
-        binding.tvName.text = name
-
         binding.btnChooseAUser.setOnClickListener{
             startActivity(Intent(this, ThirdScreenActivity::class.java))
         }
+
+        val name = intent.getStringExtra(EXTRA_NAME)
+        binding.tvName.text = name
+
     }
 
     companion object {

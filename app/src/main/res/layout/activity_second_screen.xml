@@ -92,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/button"
                 android:text="@string/choose_a_user"
                 android:layout_marginBottom="32dp"
@@ -99,7 +100,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UnusedAttribute" />
+                tools:ignore="UnusedAttribute,VisualLintButtonSize" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         

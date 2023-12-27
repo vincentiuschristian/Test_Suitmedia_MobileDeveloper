@@ -20,4 +20,8 @@
     <string name="isPalindrome">isPalindrome</string>
     <string name="notPalindrome">Not Palindrome</string>
     <string name="empty_data">Empty Data</string>
+    <string name="ok">OKE</string>
+    <string name="result">Result</string>
+    <string name="warning">Warning</string>
+    <string name="message_warning">Username cannot be empty!</string>
 </resources>

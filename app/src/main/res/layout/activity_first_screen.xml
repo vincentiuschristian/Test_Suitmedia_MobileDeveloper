@@ -23,6 +23,7 @@
         android:id="@+id/tilName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/white"
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
@@ -39,8 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
-            android:background="@drawable/background_shape"
-            android:textColorHint="@color/hint_color" />
+            android:textColorHint="@color/hint_color"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,6 +56,7 @@
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
+        app:boxBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilName">
@@ -63,9 +65,9 @@
             android:id="@+id/edt_palindrome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_shape"
             android:hint="@string/palindrome"
-            android:textColorHint="@color/hint_color" />
+            android:textColorHint="@color/hint_color"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,11 +80,13 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/button"
         android:text="@string/check"
+        android:textColor="@color/white"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPalindrome"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        tools:ignore="VisualLintButtonSize" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
@@ -93,10 +97,12 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/button"
         android:text="@string/next"
+        android:textColor="@color/white"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCheck"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.suitmedia.view.adapter
 
+import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class UserAdapter : PagingDataAdapter<DataItem, UserAdapter.MyViewHolder>(DIFF_C
                     val intent = Intent(itemView.context, SecondScreenActivity::class.java)
                     intent.putExtra(SecondScreenActivity.KEY_DATA, user)
                     itemView.context.startActivity(intent)
+                    (itemView.context as Activity).finish()
                 }
             }
         }
