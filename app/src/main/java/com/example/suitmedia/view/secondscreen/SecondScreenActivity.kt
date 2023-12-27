@@ -25,7 +25,6 @@ class SecondScreenActivity : AppCompatActivity() {
         }
 
         val user = getParcelableExtra(intent, KEY_DATA, DataItem::class.java)
-
         if (user!= null){
             binding.apply {
                 tvFirstname.text = user.firstName
